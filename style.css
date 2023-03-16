@@ -1,0 +1,196 @@
+body {
+  background-color: #282727;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+}
+
+.container {
+  min-height: 500px;
+  min-height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+}
+.box {
+  position: relative;
+  text-align: center;
+  line-height: 20px;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  background-color: #1c1b1b90;
+  box-shadow: 1px 3px 14px -2px rgba(0, 0, 0, 0.73) inset;
+  -webkit-box-shadow: 1px 3px 14px -2px rgba(0, 0, 0, 0.9) inset;
+  -moz-box-shadow: 1px 3px 14px -2px rgba(0, 0, 0, 0.794) inset;
+  cursor: pointer;
+  user-select: none;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 0px;
+  background-color: var(--color);
+}
+
+.box:hover::after {
+  height: 100%;
+  background-color: var(--color);
+  z-index: 0;
+  transition: 800ms ease-in-out;
+}
+
+.icon-area {
+  border: 2px solid var(--color);
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 30px;
+  display: grid;
+  place-items: center;
+}
+
+svg {
+  color: var(--color);
+  width: 40px;
+  height: 40px;
+}
+
+button {
+  background-color: var(--color);
+  border: none;
+  border-radius: 2px;
+  width: 140px;
+  height: 35px;
+  margin-top: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2,
+h3 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-top: 100px;
+}
+
+p {
+  width: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #9e9da2;
+  font-size: 13px;
+}
+
+.box:hover svg {
+  color: #282727;
+  z-index: 1;
+  transition: 100ms;
+}
+
+.box:hover p {
+  color: #282727;
+  z-index: 1;
+  transition: 100ms;
+}
+
+.box:hover h2 {
+  color: #282727;
+  z-index: 1;
+  transition: 100ms;
+}
+
+.box:hover h3 {
+  color: #282727;
+  z-index: 1;
+  transition: 100ms;
+}
+
+.box:hover button {
+  background-color: #282727;
+  color: aliceblue;
+  z-index: 1;
+  transition: 100ms;
+}
+
+.box:hover .icon-area {
+  border-color: #282727;
+  z-index: 1;
+  transition: 100ms;
+}
+
+/*--MEDIA QUERY--*/
+
+/*----------for tablet----------*/
+
+@media screen and (max-width: 840px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 0px;
+    row-gap: 20px;
+    height: 1600px;
+    overflow-x: scroll;
+    position: relative;
+    top: 400px;
+    margin: 0%;
+    overflow-x: hidden;
+  }
+
+  h2,
+  h3 {
+    margin-top: 100px;
+  }
+
+  .box {
+    width: 100vw;
+    height: 500px;
+  }
+
+  .icon-area {
+    width: 130px;
+    height: 130px;
+  }
+
+  svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/*----------FOR MOBILE---------*/
+
+@media screen and (max-width: 415px) {
+  .container {
+    align-self: center;
+  }
+
+  .box {
+    height: 60vh;
+  }
+
+  h2,
+  h3 {
+    margin-top: 90px;
+  }
+
+  .icon-area {
+    width: 100px;
+    height: 100px;
+  }
+
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+/*---------END----------*/
