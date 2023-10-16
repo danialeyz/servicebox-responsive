@@ -1,25 +1,27 @@
+:root {
+  --dark-color: #282727;
+  --white-color: #ffffff;
+}
+
 body {
-  background-color: #282727;
-  display: flex;
-  justify-content: center;
+  background-color: var(--dark-color);
+  display: grid;
   place-items: center;
   width: 100vw;
   height: 100vh;
-  margin: 0px;
 }
 
 .container {
-  min-height: 500px;
-  min-height: fit-content;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 20px;
 }
+
 .box {
   position: relative;
   text-align: center;
   line-height: 20px;
-  color: aliceblue;
+  color: var(--white-color);
   display: flex;
   justify-content: center;
   place-items: center;
@@ -47,7 +49,7 @@ body {
   height: 100%;
   background-color: var(--color);
   z-index: 0;
-  transition: 800ms ease-in-out;
+  transition: 900ms ease-in-out;
 }
 
 .icon-area {
@@ -90,39 +92,24 @@ p {
   font-size: 13px;
 }
 
-.box:hover svg {
-  color: #282727;
-  z-index: 1;
-  transition: 100ms;
-}
-
-.box:hover p {
-  color: #282727;
-  z-index: 1;
-  transition: 100ms;
-}
-
-.box:hover h2 {
-  color: #282727;
-  z-index: 1;
-  transition: 100ms;
-}
-
+.box:hover svg,
+.box:hover p,
+.box:hover h2,
 .box:hover h3 {
-  color: #282727;
+  color: var(--dark-color);
   z-index: 1;
   transition: 100ms;
 }
 
 .box:hover button {
-  background-color: #282727;
-  color: aliceblue;
+  background-color: var(--dark-color);
+  color: var(--white-color);
   z-index: 1;
   transition: 100ms;
 }
 
 .box:hover .icon-area {
-  border-color: #282727;
+  border-color: var(--dark-color);
   z-index: 1;
   transition: 100ms;
 }
@@ -132,18 +119,22 @@ p {
 /*----------for tablet----------*/
 
 @media screen and (max-width: 840px) {
+  body {
+    height: 100% !important;
+  }
   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-around !important;
     column-gap: 0px;
     row-gap: 20px;
-    height: 1600px;
-    overflow-x: scroll;
+    overflow-y: scroll;
     position: relative;
-    top: 400px;
     margin: 0%;
     overflow-x: hidden;
+    width: 100vw;
+    height: 100%;
   }
 
   h2,
@@ -170,10 +161,6 @@ p {
 /*----------FOR MOBILE---------*/
 
 @media screen and (max-width: 415px) {
-  .container {
-    align-self: center;
-  }
-
   .box {
     height: 60vh;
   }
