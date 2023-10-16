@@ -3,6 +3,12 @@
   --white-color: #ffffff;
 }
 
+* {
+  overflow-x: hidden !important;
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   background-color: var(--dark-color);
   display: grid;
@@ -16,6 +22,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 20px;
   overflow-x: hidden !important;
+  max-width: 1300px;
 }
 
 .box {
@@ -83,7 +90,7 @@ h2,
 h3 {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  margin-top: 100px;
+  margin-top: 1rem;
 }
 
 p {
@@ -91,6 +98,7 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   color: #9e9da2;
   font-size: 13px;
+  margin-top: 1rem;
 }
 
 .box:hover svg,
