@@ -2,7 +2,7 @@
 
 This is a landing page project for a website that offers various services. The landing page is built using HTML and CSS and features a responsive design with cool hover animations. The 3D design and interactive hover effect make the landing page visually appealing and engaging.
 
-! [](https://github.com/danialeyz/servicebox-responsive/blob/83231dfa2991c57d90e32a601d54e20ba72ce279/Screen%20Shot%201402-07-26%20at%2020.33.17.png)
+![](https://github.com/danialeyz/servicebox-responsive/blob/83231dfa2991c57d90e32a601d54e20ba72ce279/Screen%20Shot%201402-07-26%20at%2020.33.17.png)
 
 ## Features
 
